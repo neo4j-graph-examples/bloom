@@ -6,7 +6,7 @@
 :tags: visualization,bloom
 :author: Will Lyon
 :use-load-script: 
-:use-dump-file: data/bloom.dump
+:use-dump-file: data/bloom-40.dump
 :use-plugin: 
 :target-db-version: any
 :bloom-perspective: 
