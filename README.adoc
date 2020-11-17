@@ -1,32 +1,64 @@
 :name: bloom
 :long_name: Bloom Visual Discovery
-:description: Neo4j Bloom is a graph exploration application for visually interacting with graph data.
+:description: Neo4j Bloom is a graph exploration application for visually interacting with graph data
 :icon: 
-:logo: 
-:tags: visualization,bloom
-:author: Will Lyon
-:use-load-script: 
+:logo: documentation/img/bloom-icon-grey.png
+:tags: example-data,dataset,fraud-data,visualization,bloom
+:author: William Lyon
+:use-load-script:
+:data: 
 :use-dump-file: data/bloom-40.dump
 :use-plugin: 
-:target-db-version: any
-:bloom-perspective: 
-:guide: 
+:target-db-version: 3.5,4.0
+:bloom-perspective: bloom/fraud-data.bloom-perspective
+:guide: documentation/bloom.neo4j-browser-guide
 :rendered-guide: https://guides.neo4j.com/sandbox/bloom/index.html
-:model:
+:model: documentation/img/model.png
+:example: documentation/img/example.png
+
+:query: MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase) +
+RETURN p.amount as amount +
+
+:param-name: ipAddress
+:param-value: 168.166.144.243
+:result-column: amount
+:expected-result: 4910.82
+
 :model-guide:
-:todo: Locate the Bloom perspective, locate the raw guide, generate a data model for the data set, look to see whether the dump file can be replaced with a load script, locate the associated logo/icons
-image::{logo}[]
+:todo:
+image::{logo}[width=200]
 
 = {long_name} Graph Example
 
-Description: {description}
+Description: _{description}_
 
-TODO: {todo}
+.Model
+image::{model}[]
+
+.Example
+image::{example}[width=600]
+
+.Example Query:
+[source,cypher,subs=attributes]
+----
+{query}
+----
 
 === Setup
 
-This is for version: {target-db-version}
+This is for Neo4j version: `{target-db-version}`
 
-unrendered guide: {guide}
+Rendered guide available from: `:play bloom` 
+// or `:play {rendered-guide}``
 
-rendered guide available from: {rendered-guide}
+Unrendered guide: link:{guide}[]
+
+Data files: `{use-dump-file}`
+
+=== Code Examples
+
+* link:code/javascript/example.js[JavaScript]
+* link:code/java/Example.java[Java]
+* link:code/csharp/Example.cs[C#]
+* link:code/python/example.py[Python]
+* link:code/go/example.go[Go]
