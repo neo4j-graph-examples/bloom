@@ -1,5 +1,5 @@
 :name: bloom
-:long_name: Bloom Visual Discovery
+:long-name: Bloom Visual Discovery
 :description: Neo4j Bloom is a graph exploration application for visually interacting with graph data
 :icon: 
 :logo: documentation/img/bloom-icon-grey.png
@@ -28,7 +28,7 @@ RETURN p.amount as amount +
 :todo:
 image::{logo}[width=100]
 
-= {long_name} Graph Example
+== {long-name} Graph Example
 
 Description: _{description}_
 
