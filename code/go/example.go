@@ -30,7 +30,7 @@ func runQuery(uri, database, username, password string) (result []string, err er
 	results, err := session.ReadTransaction(func(transaction neo4j.Transaction) (interface{}, error) {
 		result, err := transaction.Run(
 			`
-			MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase)
+			MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase) 
 			RETURN p.amount as amount
 			`, map[string]interface{}{
 				"ipAddress": "168.166.144.243",

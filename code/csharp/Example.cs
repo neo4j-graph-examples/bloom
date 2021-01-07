@@ -18,7 +18,7 @@ namespace dotnet {
 
     var cypherQuery =
       @"
-      MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase)
+      MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase) 
       RETURN p.amount as amount
       ";
 
