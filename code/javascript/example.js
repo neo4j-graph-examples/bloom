@@ -7,7 +7,7 @@ const driver = neo4j.driver('bolt://<HOST>:<BOLTPORT>',
 
 const query =
   `
-  MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase)
+  MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase) 
   RETURN p.amount as amount
   `;
 
