@@ -17,7 +17,7 @@ public class Example {
     try (Session session = driver.session(SessionConfig.forDatabase("neo4j"))) {
 
       String cypherQuery =
-        "MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase) " +
+        "MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase)\n" +
         "RETURN p.amount as amount";
 
       var result = session.readTransaction(
