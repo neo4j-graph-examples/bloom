@@ -17,14 +17,6 @@
 :model: documentation/img/model.png
 :example: documentation/img/example.png
 
-:query: MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase) +
-RETURN p.amount as amount +
-
-:param-name: ipAddress
-:param-value: 168.166.144.243
-:result-column: amount
-:expected-result: 4910.82
-
 :todo: false
 image::{icon}[width=100]
 
@@ -43,9 +35,10 @@ image::{model}[]
 image::{example}[width=600]
 
 .Example Query:
-[source,cypher,subs=attributes]
+[source,cypher,role=query-example,param-name=ipAddress,param-value=168.166.144.243,result-column=amount,expected-result=4910.82]
 ----
-{query}
+MATCH (i:IP {ip:$ipAddress})-[r:FROM_IP]-(p:Purchase)
+RETURN p.amount as amount
 ----
 
 === Setup
