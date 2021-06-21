@@ -1,0 +1,14 @@
+{
+    "name": "bloom",
+    "description":"Neo4j Bloom is a graph exploration application for visually interacting with graph data",
+    "dbms": [
+        {
+            "dumpFile": "data/bloom-35.dump",
+            "targetNeo4jVersion":"3.5"
+        },
+        {
+            "dumpFile": "data/bloom-40.dump",
+            "targetNeo4jVersion": "^4.0"
+        }
+    ]
+}
