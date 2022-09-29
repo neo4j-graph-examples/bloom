@@ -13,6 +13,10 @@
         {
             "dumpFile": "data/bloom-43.dump",
             "targetNeo4jVersion": "^4.3"
+        },
+        {
+            "dumpFile": "data/bloom-50.dump",
+            "targetNeo4jVersion": "^5.0"
         }
     ]
 }
