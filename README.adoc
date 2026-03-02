@@ -7,10 +7,10 @@
 :demodb: false
 :data: false
 :use-load-script: false
-:use-dump-file: data/bloom-40.dump
+:use-dump-file: data/bloom-2026.01.dump
 :zip-file: false
 :use-plugin: false
-:target-db-version: 3.5,4.0
+:target-db-version: 3.5,4.0,5.0,2026.01
 :bloom-perspective: bloom/fraud-data.bloom-perspective
 :guide: documentation/bloom.neo4j-browser-guide
 :rendered-guide: https://guides.neo4j.com/sandbox/{name}/index.html
